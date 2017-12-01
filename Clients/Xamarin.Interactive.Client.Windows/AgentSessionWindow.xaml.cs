@@ -43,6 +43,7 @@ using Xamarin.Interactive.Client.Windows.ViewModels;
 using Xamarin.Interactive.Client.Windows.Views;
 
 using XIR = Xamarin.Interactive.Remote;
+using Xamarin.Interactive.Client.ViewInspector;
 
 namespace Xamarin.Interactive.Client.Windows
 {
@@ -71,7 +72,7 @@ namespace Xamarin.Interactive.Client.Windows
         public static ClientSessionController<AgentSessionWindow> SessionController
             = new ClientSessionController<AgentSessionWindow> ();
 
-        public ViewInspectorViewModel<AgentSessionWindow> ViewModel { get; }
+        public WpfViewInspector<AgentSessionWindow> ViewModel { get; }
 
         public static AgentSessionWindow Open (ClientSessionUri clientSessionUri)
         {
@@ -191,7 +192,7 @@ namespace Xamarin.Interactive.Client.Windows
 
             InitializeComponent ();
             DataContext = this;
-            ViewModel = new ViewInspectorViewModel<AgentSessionWindow> (Session, this);
+            ViewModel = new WpfViewInspector<AgentSessionWindow> (Session, this);
             menuManager = new MenuManager (mainMenu, this, Session.SessionKind != ClientSessionKind.LiveInspection);
 
             replWebView.Loaded += HandleWebViewControlLoaded;

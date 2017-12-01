@@ -689,6 +689,12 @@
       <Component Id="AndroidAgentApp.netstandard.dll" Guid="E470B065-2E03-4AAB-A3D8-1714483D4B13">
         <File Id="AndroidAgentApp.netstandard.dll" Source="$(var.AndroidAppAssembliesDir)\netstandard.dll" />
       </Component>
+      <Component Id="AndroidAgentApp.System.Text.Encoding.dll" Guid="3EA4CDA9-438B-4436-94A9-855D10477415">
+        <File Id="AndroidAgentApp.System.Text.Encoding.dll" Source="$(var.AndroidAppAssembliesDir)\System.Text.Encoding.dll" />
+      </Component>
+      <Component Id="AndroidAgentApp.System.Text.Encoding.Extensions.dll" Guid="D0FFBDF9-3F6B-43E0-B5D2-6F28549ED306">
+        <File Id="AndroidAgentApp.System.Text.Encoding.Extensions.dll" Source="$(var.AndroidAppAssembliesDir)\System.Text.Encoding.Extensions.dll" />
+      </Component>
     </ComponentGroup>
     <ComponentGroup Id="AndroidAgentAppClientIntegrationComponents" Directory="AndroidAgentAppClientIntegrationInstallFolder">
       <Component Id="Filedf726d8904b8bd646182c5041501fc57a86eb6a4" Guid="CA9D4CC8-8400-4DC7-B9FF-4FEAABA3802A">
